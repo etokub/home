@@ -1,0 +1,105 @@
+*
+	box-sizing: border-box
+
+body
+	font-family: 'Roboto Condensed', sans-serif
+
+img
+	max-width: 100%
+
+h1
+	font-size: 18px
+	font-weight: 400
+	line-height: 18px
+	text-transform: uppercase
+
+h2
+	font-size: 24px
+	line-height: 14px
+	text-transform: uppercase
+	color: $grey-color
+	padding-bottom: 20px	
+	
+a
+	text-decoration: none
+
+.view
+	&-holder
+		padding-left: 22px
+	&-btn
+		font-size: 18px
+		font-weight: 300
+		line-height: 12px
+		text-transform: uppercase
+		position: relative
+		color: $grey-color
+		padding-left: 5px
+		&::after
+			content: url('../pic/arrow-icon-orange.svg')
+			position: absolute
+			right: 100%
+			top: 50%
+			margin-top: -10px
+			transition: all .3s ease-in-out
+		&:hover::after
+			transform: rotate(90deg)
+
+.icon
+	display: inline-block
+	vertical-align: middle
+	&-heart.dark::after
+		content: url('../pic/heart-dark.svg')
+	&-heart.light::after
+		content: url('../pic/heart-light.svg')							
+
+.cols
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+
+.col
+	&-100
+		width: 100%
+	&-70
+		width: 70%
+	&-50
+		width: 50%	
+	&-30
+		width: 30%
+	&-item
+		display: flex
+		align-self: stretch
+		width: 100%	
+		&__inner
+			display: flex
+			flex-wrap: wrap
+			width: 100%
+		&__content
+			position: relative		
+
+
+.text
+	&-content
+		position: absolute
+		text-align: left
+	&-item
+		font-size: 12px
+		line-height: 12px
+		text-transform: uppercase
+		color: $grey-color
+		strong
+			font-weight: bold
+.likes
+	&-number
+		display: block
+		color: $red-color
+		padding-top: 5px
+		font-size: 11px
+		line-height: 12px
+		text-transform: uppercase				
+
+.row
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	width: 100%	

@@ -1,0 +1,373 @@
+
+.hero
+	background-color: $grey-bg-light
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		+media(767)
+    		height: auto
+		&__inner
+			align-items: start
+		&__image
+			width: 70%
+			align-self: center
+			text-align: right
+			+media(767)
+    			width: $w100
+		&__content
+			width: 30%
+			+media(767)
+    			width: $w100
+    			text-align: center
+			&-title
+				margin-left: 50%
+				padding: 50px 0 0 0
+				+media(1280)
+    				margin-left: 0
+    				padding: 50px 15px
+
+.social
+	&-list
+		text-align: center
+		padding: 50px 0 0 0
+	&-item
+		display: inline-block
+	&-link
+		color: $blue-color
+		font-size: 22px
+		padding: 6px
+
+
+.contact
+	background: linear-gradient(to top left, $blue-bg calc(50% - 1px), #fff, $blue-bg calc(50% + 1px) )
+	color: $white-color
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+			padding: 100px 15px 100px 60px
+			+media(1280)
+    			padding: 100px 15px
+
+.address
+	font-size: 13px
+	font-weight: 400
+	line-height: 14px
+	text-transform: uppercase
+	&-info
+		margin-bottom: 40px
+	&-contact
+		margin-left: 80px				
+
+.left-side
+	+media(1280)
+    	width: $w100
+
+.right-side
+	+media(1280)
+    	width: $w100
+
+.p-col
+	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
+	width: $w45
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: center
+			text-align: right
+		&__content
+			width: 100%
+			color: #fff
+			padding: 0 50px
+	.strong
+		font-size: 48px
+		font-weight: 400
+		text-transform: uppercase
+
+.project
+	&-wrap
+		display: inline-block
+		margin-right: 50%
+		margin-bottom: 70px
+	&-list
+		text-align: left
+	&-link
+		color: $white-color
+		font-size: 13px
+		font-weight: 400
+		line-height: 14px
+		text-transform: uppercase
+		position: relative
+		padding: 0 10px
+		&::after
+			content: url('../pic/arrow-icon-white.svg')
+			position: absolute
+			right: 100%
+			top: 50%
+			margin-top: -10px
+			transform: scale(0)
+			transition: transform .5s ease	
+		&.active
+			color: $black-color
+			&::after
+				transform: scale(1)
+		&:hover::after
+			transform: scale(1)			
+
+		
+
+.fondue
+	background-color: $white-bg
+	// background-image: url("../img/bg-fondue.jpg")
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: 100% 0
+	width: $w55
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: center
+			text-align: right
+		&__content
+			width: 100%
+	.text
+		&-content
+			top: 15%
+			left: 15%
+			bottom: 15px
+	.likes
+		&-counter
+			position: absolute
+			bottom: 70px	
+			left: 60px	
+		
+	.view-holder
+		margin-top: 70px				
+			
+							
+
+.louis
+	background-color: $dark-bg
+	width: $w30
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h470
+		&__inner
+			align-items: end
+			text-align: right
+		&__content
+			width: 100%
+			color: $white-color
+
+	.text
+		&-content
+			color: $white-color
+			top: 40px
+			left: 30px
+			h2
+				color: $white-color	
+		&-item
+			color: $white-color
+					
+	.view
+		&-holder
+			margin-top: 40px
+		&-btn
+			color: $white-color
+
+	.likes
+		&-counter
+			position: relative
+			margin-top: 30px
+			margin-left: 30%	
+
+
+.p22
+	background-color: $grey-bg-light
+	width: $w70
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h470
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+
+.sesann
+	background-color: $white-bg
+	width: $w70
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h300
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+			
+
+.alessi
+	background-color: $light-bg
+	width: $w30
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h300
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+			
+
+.potter
+	background-color: $grey-bg-light
+	width: $w100
+	order: 2
+	+media(1280)
+    	width: 33.333%
+	.col-item
+		height: $h250
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+			color: #fff
+
+
+.tabano
+	background-color: $light-bg
+	width: $w100
+	order: 1
+	+media(1280)
+    	width: 33.333%
+	.col-item
+		height: $h470
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+
+.fiji
+	background-color: $white-bg
+	width: $w100
+	order: 3
+	+media(1280)
+    	width: 33.333%
+	.col-item
+		height: $h250
+		&__inner
+			align-items: center
+		&__content
+			width: 100%			
+
+.timeline
+	background-color: $yellow-bg
+	width: $w100
+	+media(1280)
+    	width: 33.333%
+	.col-item
+		height: $h300
+		&__inner
+			align-items: center
+		&__content
+			width: 100%
+
+		
+.studio
+	background: linear-gradient(to top left, $red-bg calc(50% - 1px), #fff, $red-bg calc(50% + 1px) )
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.studio-content
+	background-color: $grey-bg-light
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.staff
+	background-color: $grey-bg-light
+	+media(767)
+    	width: $w100
+	.col-item
+		padding: 60px 0 100px 0
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.staff-content
+	background-color: $grey-bg-light
+	+media(767)
+    	width: $w100
+	.col-item
+		padding: 60px 0 100px 0
+		&__inner
+			align-items: end
+		&__content
+			width: 100%			
+
+.news-title
+	background: linear-gradient(to top left, $green-bg calc(50% - 1px), #fff, $green-bg calc(50% + 1px) )
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.news
+	background-color: $light-bg
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $h500
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.map
+	background-color: $blue-bg
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $full-height
+		&__inner
+			align-items: end
+		&__content
+			width: 100%
+
+.contact-g
+	background-color: $grey-bg-light
+	+media(767)
+    	width: $w100
+	.col-item
+		height: $full-height
+		&__inner
+			align-items: end
+		&__content
+			width: 100%			
