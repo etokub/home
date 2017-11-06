@@ -75,7 +75,8 @@ a
 			flex-wrap: wrap
 			width: 100%
 		&__content
-			position: relative		
+			position: relative
+			width: 100%		
 
 
 .text
@@ -102,4 +103,8 @@ a
 	display: flex
 	align-items: stretch
 	flex-wrap: wrap
-	width: 100%	
+	width: 100%
+	&.custom_1
+		+media(1280)
+    		align-items: start
+    		justify-content: end;	
