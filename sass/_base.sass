@@ -19,7 +19,17 @@ h2
 	text-transform: uppercase
 	color: $grey-color
 	padding-bottom: 20px	
-	
+
+h3
+	font-size: 12px
+	line-height: 12px
+	text-transform: uppercase
+	color: $grey-color
+
+p
+	font-size: 12px
+	line-height: 12px	
+
 a
 	text-decoration: none
 
@@ -57,7 +67,14 @@ a
 	align-items: stretch
 	flex-wrap: wrap
 
+.row
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	width: 100%
+
 .col
+	position: relative
 	&-100
 		width: 100%
 	&-70
@@ -66,23 +83,24 @@ a
 		width: 50%	
 	&-30
 		width: 30%
-	&-item
+	&-content
 		display: flex
 		align-self: stretch
-		width: 100%	
-		&__inner
-			display: flex
-			flex-wrap: wrap
-			width: 100%
-		&__content
-			position: relative
-			width: 100%		
+		width: 100%
+		position: relative
+		z-index: 2
 
-
+.bg
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-size: contain
+	background-repeat: no-repeat
+	z-index: -1		
+		
 .text
-	&-content
-		position: absolute
-		text-align: left
 	&-item
 		font-size: 12px
 		line-height: 12px
@@ -99,12 +117,8 @@ a
 		line-height: 12px
 		text-transform: uppercase				
 
-.row
-	display: flex
-	align-items: stretch
-	flex-wrap: wrap
-	width: 100%
-	&.custom_1
-		+media(1280)
-    		align-items: start
-    		justify-content: end;	
+.cell
+	&-text
+	&-link
+	&-likes
+		padding-left: 60px	
