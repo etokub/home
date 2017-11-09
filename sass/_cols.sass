@@ -8,38 +8,43 @@
 
 /*---------------------------------------*/
 .hero
-	background-color: $grey__1
+	background-color: $green__1
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h500
-		+media(767)
-    		height: auto
+	.col
+		&-inner
+			height: $h500
+		&-content
+			flex-direction: column
+			align-items: end
+	.social
+		&-list
+			text-align: center
+			padding: 50px 0 0 0
+		&-link
+			color: $blue-color
+			font-size: 22px
+			padding: 6px	
+						
 
 .hero-text
-	align-items: end
 	flex-direction: column
 	padding: 50px 0
+	width: 50%
+	margin-left: 50%
+	&__title
+		align-self: start
 
 .hero-img
 	justify-content: end
 	align-items: center
     			
     			
-		
+	
 /*---------------------------------------*/
 
 /*---------------------------------------*/
-.social
-	&-list
-		text-align: center
-		padding: 50px 0 0 0
-	&-item
-		display: inline-block
-	&-link
-		color: $blue-color
-		font-size: 22px
-		padding: 6px
+
 /*---------------------------------------*/		
 
 /*---------------------------------------*/
@@ -48,12 +53,13 @@
 	color: $white-color
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h500
-		padding: 100px 60px
-		align-items: end
-		+media(1280)
-    		padding: 100px 15px
+	.col
+		&-inner
+			height: $h500
+		&-content
+			align-items: end
+			padding: 40px 60px
+			
 .address
 	font-size: 13px
 	font-weight: 400
@@ -71,26 +77,25 @@
 	width: $w45
 	+media(767)
     	width: $w100
-	.col-content
-		
-		&__inner
-			align-items: center
-			text-align: right
-		&__content
+	.col
+		&-inner
 			height: $h500
-			color: #fff
-			padding: 0 50px
+			flex-direction: column 
+			align-items: center
+			justify-content: center
+			padding-right: 45px
+			
 	.title
-		display: block	
+		color: $white-color	
+		width: 100%
+		text-align: right
 	.strong
 		font-size: 48px
 		font-weight: 400
 		text-transform: uppercase
 .project
 	&-wrap
-		display: inline-block
-		margin-right: 50%
-		margin-bottom: 70px
+		margin: 0 70px 70px 0
 	&-list
 		text-align: left
 	&-link
@@ -124,30 +129,35 @@
 	width: $w55
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h500
-		justify-content: space-between
-		flex-direction: column
-		padding: 90px 15px 70px 100px
-	.bg
-		background-position: 100% 0	
-	
-			
-					
+	.col
+		&-inner
+			height: $h500
+			justify-content: right
+			align-items: center
+		&-content
+			width: 60%
+			justify-content: space-between
+			flex-direction: column
+			padding: 90px 15px 70px 100px							
 /*---------------------------------------*/
 
+/*---------------------------------------*/
 .louis
 	background-color: $dark-bg
 	width: $w30
 	+media(1280)
 		width: $w45
 		+media(767)
-    		width: $w100
-	.col-content
-		height: $h470
-		flex-direction: column
-		color: $white-color
-		padding: 40px 30px
+			width: $w100
+	.col
+		&-inner
+			height: $h500
+			justify-content: right
+			align-items: end
+		&-content
+			justify-content: start
+			flex-direction: column
+			padding: 40px 30px
 	h2
 		color: $white-color
 
@@ -175,11 +185,15 @@
 		width: $w55
 		+media(767)
     		width: $w100
-	.col-content
-		height: $h470
-		flex-direction: row
-		justify-content: end
-		padding: 90px 70px
+	.col
+		&-inner
+			height: $h470
+			justify-content: center
+			align-items: center
+		&-content
+			padding: 90px 70px
+			justify-content: right
+			align-items: start
 
 	.cell
 		&-text
@@ -199,12 +213,16 @@
 	width: $w50
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h300
-		flex-direction: row
-		align-items: end
-		justify-content: center
-		padding: 25px
+	.col
+		&-inner
+			height: $h300
+			justify-content: center
+			align-items: start
+			padding-top: 25px
+		&-content
+			padding: 20px 25px
+			justify-content: center
+			align-items: end
 	.cell
 		&-link
 			margin-bottom: 30px
@@ -219,11 +237,16 @@
 	width: $w20
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h300
-		justify-content: end
-		align-items: end
-		padding: 40px 20px
+	.col
+		&-inner
+			height: $h300
+			justify-content: left
+			align-items: center
+		&-content
+			flex-direction: column
+			justify-content: right
+			align-items: end	
+			padding: 40px 15px 40px 20px
 	.cell
 		&-link
 			padding: 30px 0	
@@ -237,11 +260,17 @@
 	+media(1280)
     	width: $w50
     	order: 2
-	.col-content
-		height: $h250
-		flex-direction: column
-		color: $grey-color
-		padding: 35px 40px
+	.col
+		&-inner
+			height: $h250
+			color: $grey-color
+			justify-content: right
+			align-items: center
+		&-content
+			width: 50%
+			flex-direction: column	
+			padding: 35px 40px
+			align-items: start
 	.cell
 		&-text
 			p
@@ -259,12 +288,14 @@
 	order: 1
 	+media(1280)
     	width: $w100
-	.col-content
-		height: $h470
-		flex-direction: row
-		align-items: end
-		justify-content: center
-		padding: 60px 40px
+	.col
+		&-inner
+			height: $h470
+			justify-content: center
+			align-items: start
+		&-content
+			padding: 60px 40px
+			align-items: end
 	.cell
 		&-link
 			margin-bottom: 30px
@@ -284,20 +315,21 @@
 	+media(1280)
     	width: $w50
     	order: 3
-	.col-content
-		height: $h250
-		flex-direction: column
-		align-items: end
-		justify-content: end
-		padding: 25px
+	.col
+		&-inner
+			height: $h250
+			justify-content: left
+			align-items: center
+		&-content
+			width: 50%
+			left: 50%
+			flex-direction: column
+			align-items: start
+			padding: 25px
 	.cell
 		&-link
 			margin: 25px 0
-		&-likes
-			padding-left: 0
-			padding-right: 40px
-	.bg
-		background-position: 0% 50%			
+			
 /*---------------------------------------*/						
 
 /*---------------------------------------*/
@@ -305,8 +337,38 @@
 	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
 	width: $w30
 	order: 1
-	.col-content
-		height: $h300
+	.col
+		&-inner
+			height: $h300
+			justify-content: left
+			align-items: start
+			flex-direction: column
+			padding: 60px
+.timeline
+	&-title
+		color: $grey-color
+		font-size: 14px
+		text-transform: uppercase
+		padding-left: 10px
+		margin-bottom: 10px			
+	&-link
+		color: $white-color
+		font-size: 13px
+		font-weight: 400
+		line-height: 14px
+		text-transform: uppercase
+		position: relative
+		padding: 0 10px
+		&::after
+			content: url('../pic/arrow-icon-white.svg')
+			position: absolute
+			right: 100%
+			top: 50%
+			margin-top: -10px
+			transform: scale(0)
+			transition: transform .5s ease	
+		&:hover::after
+			transform: scale(1)			
 /*---------------------------------------*/
 
 /*---------------------------------------*/		
@@ -314,35 +376,155 @@
 	background: linear-gradient(to top left, $red-bg calc(50% - 1px), #fff, $red-bg calc(50% + 1px) )
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h500
+	.col
+		&-inner
+			align-items: center
+			padding: 0 100px
+			height: 100%
+	.title
+		color: $white-color
+		width: 100%
+		text-align: right	
+	.strong
+		font-size: 48px
+		font-weight: 400
+		text-transform: uppercase
+		display: inline-block
+		margin: 70px 0px 0 0		
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .studio-content
-	background-color: $grey-bg-light
+	background-color: $grey__1
 	+media(767)
     	width: $w100
-	.col-content
-		height: $h500
+	.col
+		&-inner
+			padding: 90px 80px
+			flex-direction: row
+	.content-wrap
+		padding-right: 20px
+	
+	.info-text
+		padding-right: 20px
+
+.main-descr
+	color: $grey-color	
+	p
+		padding-bottom: 25px
+		font-size: 18px
+		line-height: 18px
+		font-style: italic
+
+.text-descr
+	color: $grey-color
+	padding-top: 20px
+	p
+		padding-bottom: 25px
+		font-size: 16px
+		line-height: 18px			
+.awards
+	&-img
+		text-align: center	
+	&-info
+		padding-top: 40px
+		&__item
+			p
+				font-size: 12px
+				line-height: 14px
+				text-transform: uppercase
+			&:nth-child(1)
+				padding-right: 25px
+			&:nth-child(2)
+				padding-left: 25px	
+
+.content-wrap
+	padding-bottom: 25px
+
+.border-deco
+	ont-size: 14px
+	font-weight: 700
+	line-height: 18px
+	border-bottom: 1px solid
 /*---------------------------------------*/			
 
 /*---------------------------------------*/
 .staff
-	background-color: $grey-bg-light
+	background-color: $grey__1
 	+media(767)
     	width: $w100
-	.col-content
-		padding: 60px 0 100px 0
+	.col
+		&-inner
+			padding: 60px 0 100px 0
+			justify-content: right
+			align-items: center
+			padding-right: 35px
+			height: 100%
+	&-descr
+		width: 65%
+		h3
+			font-size: 14px
+		h3, p
+			padding-bottom: 20px	
+				
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .staff-content
-	background-color: $grey-bg-light
+	background-color: $grey__1
 	+media(767)
     	width: $w100
-	.col-content
-		padding: 60px 0 100px 0	
+	.col
+		&-inner
+			padding: 60px 0 100px 0
+
+
+
+.personal
+	&-info
+		padding: 20px 0
+		text-align: left
+		.social
+			&-link
+				color: $red-color
+				font-size: 14px
+				padding-left: 12px	
+	&-title
+		h3
+			font-weight: 700
+			font-style: 13px
+		span
+			font-size: 12px
+			font-weight: 400
+			line-height: 16px
+			text-transform: uppercase
+	&-links
+		display: flex
+		flex-direction: row
+		padding-top: 20px
+		.col-cv
+			flex: 1
+		.cv-link
+			color: $red-color
+			font-size: 14px
+			text-transform: uppercase
+			position: relative
+			padding-right: 5px
+			&::after
+				content: url('../pic/arrow-icon-red.svg')
+				position: absolute
+				left: 100%
+				top: 50%
+				margin-top: -10px
+				transition: all .3s ease-in-out
+			&:hover::after
+				transform: rotate(-90deg)	
+		.col-social-links
+			flex: 3
+			text-align: right
+
+			
+
 /*---------------------------------------*/
 
 /*---------------------------------------*/

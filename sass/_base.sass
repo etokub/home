@@ -3,6 +3,7 @@
 
 body
 	font-family: 'Roboto Condensed', sans-serif
+	color: $grey-color
 
 img
 	max-width: 100%
@@ -17,14 +18,12 @@ h2
 	font-size: 24px
 	line-height: 14px
 	text-transform: uppercase
-	color: $grey-color
-	padding-bottom: 20px	
+	padding-bottom: 12px	
 
 h3
 	font-size: 12px
 	line-height: 12px
 	text-transform: uppercase
-	color: $grey-color
 
 p
 	font-size: 12px
@@ -32,6 +31,12 @@ p
 
 a
 	text-decoration: none
+
+.social
+	&-list
+	&-item
+		display: inline-block
+	&-link
 
 .view
 	&-holder
@@ -83,11 +88,16 @@ a
 		width: 50%	
 	&-30
 		width: 30%
+	&-inner
+		display: flex		
 	&-content
 		display: flex
 		align-self: stretch
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
 		width: 100%
-		position: relative
 		z-index: 2
 
 .bg

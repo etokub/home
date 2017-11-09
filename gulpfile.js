@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 	.pipe(browserSync.reload({stream: true}))
 });
 gulp.task('app-styles', function() {
-	return gulp.src('./app/*.css')
+	return gulp.src('./app/**/*.css')
 	.pipe(concat('app.min.css'))
 	.pipe(minifyCSS())
 	.pipe(gulp.dest('./css/'))
@@ -43,8 +43,7 @@ gulp.task('app-styles', function() {
 
 gulp.task('scripts', function(){
 	return gulp.src([
-		'js/jquery-3.2.1.js', 
-		'js/masonry.pkgd.js',
+		'app/**/swiper.js',
 		])
 	.pipe(concat('plugins.min.js'))
 	.pipe(uglify())
