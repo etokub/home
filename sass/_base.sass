@@ -7,6 +7,7 @@ body
 
 img
 	max-width: 100%
+	max-height: 100%
 
 h1
 	font-size: 18px
@@ -16,7 +17,7 @@ h1
 
 h2
 	font-size: 24px
-	line-height: 14px
+	line-height: 24px
 	text-transform: uppercase
 	padding-bottom: 12px	
 
@@ -33,10 +34,14 @@ a
 	text-decoration: none
 
 .social
-	&-list
 	&-item
 		display: inline-block
+	&-list
+		padding: 50px 0 0 0	
 	&-link
+		color: $blue-color
+		font-size: 22px
+		padding: 6px
 
 .view
 	&-holder
@@ -94,10 +99,8 @@ a
 		display: flex
 		align-self: stretch
 		position: absolute
-		top: 0
-		left: 0
-		height: 100%
-		width: 100%
+		height: auto
+		width: auto
 		z-index: 2
 
 .bg
@@ -131,4 +134,13 @@ a
 	&-text
 	&-link
 	&-likes
-		padding-left: 60px	
+		align-self: center
+
+
+
+.map-wrap
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%			

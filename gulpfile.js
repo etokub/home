@@ -42,12 +42,11 @@ gulp.task('app-styles', function() {
 });
 
 gulp.task('scripts', function(){
-	return gulp.src([
-		'app/**/swiper.js',
-		])
+	return gulp.src('./app/**/*.js')
 	.pipe(concat('plugins.min.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('./js/'))
+	.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browser-sync', function(){
@@ -103,7 +102,7 @@ gulp.task('build', ['clean', 'sass', 'styles', 'scripts', 'imgmin'], function(){
 		.pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
-		'js/plugins.min.css'
+		'js/plugins.min.js'
 	])
 		.pipe(gulp.dest('dist/css'));	
 

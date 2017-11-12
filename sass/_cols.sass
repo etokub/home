@@ -1,64 +1,60 @@
 .left-side
 	+media(1280)
-    	width: $w100
+    	width: 100%
 
 .right-side
 	+media(1280)
-    	width: $w100 
+    	width: 100% 
 
 /*---------------------------------------*/
 .hero
 	background-color: $green__1
-	+media(767)
-    	width: $w100
+	width: $w70
+	+media(980)
+		width: 100%
 	.col
 		&-inner
-			height: $h500
+    		height: $h500
+    		justify-content: right
+    		align-items: center
+    		+media(767)
+    			min-height: 100vh
+    			align-items: end
+
 		&-content
-			flex-direction: column
-			align-items: end
-	.social
-		&-list
-			text-align: center
-			padding: 50px 0 0 0
-		&-link
-			color: $blue-color
-			font-size: 22px
-			padding: 6px	
-						
-
-.hero-text
-	flex-direction: column
-	padding: 50px 0
-	width: 50%
-	margin-left: 50%
-	&__title
-		align-self: start
-
-.hero-img
-	justify-content: end
-	align-items: center
-    			
-    			
+    		left: 15%
+    		top: 0
+    		flex-direction: column
+    		padding: 50px 0
+    		align-items: start
+    		+media(1280)
+    			left: 0
+    			padding: 40px 30px	
 	
+	.social-list
+		text-align: center
+			  				
 /*---------------------------------------*/
-
-/*---------------------------------------*/
-
-/*---------------------------------------*/		
 
 /*---------------------------------------*/
 .contact
 	background: linear-gradient(to top left, $blue-bg calc(50% - 1px), #fff, $blue-bg calc(50% + 1px) )
 	color: $white-color
-	+media(767)
-    	width: $w100
+	width: $w30
+	+media(980)
+    	width: 100%
 	.col
 		&-inner
 			height: $h500
-		&-content
 			align-items: end
-			padding: 40px 60px
+			padding: 40px 60px 90px  60px
+			+media(1280)
+				padding: 40px 30px
+			+media(980)
+				align-items: center	
+			+media(768)
+				height: auto
+				padding: 100px 40px	
 			
 .address
 	font-size: 13px
@@ -75,8 +71,8 @@
 .p-col
 	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
 	width: $w45
-	+media(767)
-    	width: $w100
+	+media(768)
+    	width: 100%
 	.col
 		&-inner
 			height: $h500
@@ -127,53 +123,79 @@
 	background-color: $white-bg
 	background-position: 100% 0
 	width: $w55
-	+media(767)
-    	width: $w100
+	+media(768)
+    	width: 100%
 	.col
 		&-inner
 			height: $h500
 			justify-content: right
 			align-items: center
 		&-content
-			width: 60%
+			top: 0
+			left: 0
+			height: 100%
 			justify-content: space-between
 			flex-direction: column
-			padding: 90px 15px 70px 100px							
+			padding: 90px 15px 70px 100px
+			+media(1280)
+				padding: 40px 30px	
+.i-1
+	display: flex
+	flex-direction: row
+.col-w
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	height: 100%
+	padding: 50px
+.col-t
+	flex: 1
+.col-i
+	flex: 1										
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .louis
 	background-color: $dark-bg
 	width: $w30
+	+media(768)
+    	width: 100%
 	+media(1280)
 		width: $w45
-		+media(767)
-			width: $w100
+		+media(768)
+			width: 50%
+			order: 1
+			+media(640)
+				width: 100%
 	.col
 		&-inner
 			height: $h500
 			justify-content: right
 			align-items: end
 		&-content
+			top: 0
+			left: 0
 			justify-content: start
 			flex-direction: column
 			padding: 40px 30px
+			+media(768)
+				height: 100%
+				justify-content: space-between
 	h2
 		color: $white-color
 
 	.cell
 		&-link
 			margin: 30px 0
+			+media(768)
+				margin: -20px 0 0 0
 	
 	.text-item
 		color: $white-color				
 	
 	.view
 		&-btn
-			color: $white-color
-
-	.bg
-		background-position: 100% 100%		
+			color: $white-color		
 
 /*---------------------------------------*/
 
@@ -183,17 +205,30 @@
 	width: $w70
 	+media(1280)
 		width: $w55
-		+media(767)
-    		width: $w100
+		+media(768)
+    		width: 100%
 	.col
 		&-inner
 			height: $h470
 			justify-content: center
 			align-items: center
+			+media(1280)
+				align-items: end
 		&-content
-			padding: 90px 70px
+			top: 0
+			right: 0
+			padding: 40px 30px
 			justify-content: right
 			align-items: start
+			+media(1280)
+				justify-content: space-around
+				width: 100%
+				+media(480)
+					width: auto
+					height: 100%
+					flex-direction: column
+					justify-content: start
+					align-items: center
 
 	.cell
 		&-text
@@ -201,32 +236,60 @@
 		&-link
 			text-align: center	
 			
-	.view-holder
-		margin: 10px 0 20px 0
-	.bg
-		background-position: 50% 50%		
+	.cell
+		&-link
+			margin: 20px 0 0 0
+		&-likes
+			margin: 20px 0 0 0
+
 /*---------------------------------------*/		
 			
 /*---------------------------------------*/
 .sesann
-	background-color: $white-bg
-	width: $w50
-	+media(767)
-    	width: $w100
+	background-color: $grey__3
+	width: $w70
+	+media(980)
+		width: 60%
+		+media(768)
+    		width: 100%
 	.col
 		&-inner
 			height: $h300
 			justify-content: center
 			align-items: start
-			padding-top: 25px
+			+media(980)
+    			align-items: center
+    			+media(480)
+    				align-items: start
+			img
+				max-width: 80%
+				+media(980)
+					max-width: 100%
+					padding-bottom: 60px
+				+media(480)
+					padding: 40px 0	
+
 		&-content
-			padding: 20px 25px
-			justify-content: center
+			bottom: 0
+			left: 0
+			width: 100%
+			padding: 20px 80px
+			justify-content: space-around
 			align-items: end
+			+media(980)
+				padding: 20px 40px
+				+media(480)
+					flex-direction: column
+					justify-content: end
+					align-items: center
 	.cell
 		&-link
 			margin-bottom: 30px
-			padding-left: 50px
+			+media(480)
+				margin: 30px 0
+		&-likes
+			margin-bottom: 30px
+				
 		
 			
 /*---------------------------------------*/			
@@ -234,9 +297,13 @@
 /*---------------------------------------*/
 .alessi
 	background-color: $light-bg
-	width: $w20
-	+media(767)
-    	width: $w100
+	width: $w30
+	+media(980)
+		width: 40%
+		+media(768)
+    		width: 50%
+    		+media(640)
+    			width: 100%
 	.col
 		&-inner
 			height: $h300
@@ -246,7 +313,15 @@
 			flex-direction: column
 			justify-content: right
 			align-items: end	
-			padding: 40px 15px 40px 20px
+			padding: 40px 30px 40px 0px
+			top: 0
+			right: 0
+			+media(1280)
+				padding: 40px 30px
+				height: 100%
+				flex-direction: column
+				justify-content: space-between
+				
 	.cell
 		&-link
 			padding: 30px 0	
@@ -258,19 +333,31 @@
 	width: $w100
 	order: 1
 	+media(1280)
-    	width: $w50
+    	width: 45%
     	order: 2
+    	+media(980)
+    		width: 50%
+    		+media(767)
+    			width: 100%
 	.col
 		&-inner
 			height: $h250
 			color: $grey-color
 			justify-content: right
 			align-items: center
+			+media(1280)
+				height: 500px
+			+media(979)
+				align-items: end
 		&-content
-			width: 50%
+			top: 0
+			left: 0
 			flex-direction: column	
 			padding: 35px 40px
 			align-items: start
+			justify-content: space-between
+			+media(1280)
+				height: 100%
 	.cell
 		&-text
 			p
@@ -287,19 +374,53 @@
 	width: $w100
 	order: 1
 	+media(1280)
-    	width: $w100
+    	width: 55%
+    	+media(980)
+    		width: 100%
 	.col
 		&-inner
-			height: $h470
+			height: $h500
 			justify-content: center
 			align-items: start
+			+media(1280)
+    			justify-content: left
+    			align-items: center
+    			+media(980)
+    				padding-left: 40px
+    			+media(767)
+    				align-items: start
+    				padding-left: 0
+    				justify-content: center	
 		&-content
 			padding: 60px 40px
 			align-items: end
+			bottom: 0
+			left: 0
+			width: 100%
+			+media(1280)
+    			width: auto
+    			right: 0
+    			left: 50%
+    			height: 100%
+    			padding: 35px 40px
+    			flex-direction: column
+    			justify-content: space-around
+    			align-items: left
+    			+media(980)
+    				flex-direction: row
+    				align-items: center
+    			+media(767)
+    				align-items: end
+    				height: auto
+    				left: 0
+    				width: 100%
+
 	.cell
 		&-link
 			margin-bottom: 30px
 			padding-left: 25px
+			+media(1280)
+				padding-left: 0
 		&-likes
 			padding-left: 20px
 	.bg
@@ -313,30 +434,46 @@
 	width: $w100
 	order: 1
 	+media(1280)
-    	width: $w50
+    	width: 50%
     	order: 3
+    	+media(767)
+    		width: 100%
 	.col
 		&-inner
 			height: $h250
 			justify-content: left
 			align-items: center
+			+media(979)
+				align-items: end
 		&-content
-			width: 50%
-			left: 50%
+			top: 0
+			right: 0
 			flex-direction: column
 			align-items: start
 			padding: 25px
+			+media(1280)
+				height: 100%
+				justify-content: space-between
+				padding: 35px 40px
+
 	.cell
 		&-link
 			margin: 25px 0
 			
 /*---------------------------------------*/						
-
+.cell-wrap
+	.col-inner
+		+media(980)
+			height: $h500
 /*---------------------------------------*/
 .timeline
 	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
-	width: $w30
-	order: 1
+	width: $w100
+	order: 4
+	+media(1280)
+		width: 50%
+		+media(980)
+			width: 100%
 	.col
 		&-inner
 			height: $h300
@@ -344,7 +481,9 @@
 			align-items: start
 			flex-direction: column
 			padding: 60px
-.timeline
+			+media(980)
+				height: auto
+				padding: 100px 40px
 	&-title
 		color: $grey-color
 		font-size: 14px
@@ -371,42 +510,59 @@
 			transform: scale(1)			
 /*---------------------------------------*/
 
+
+
+
 /*---------------------------------------*/		
 .studio
 	background: linear-gradient(to top left, $red-bg calc(50% - 1px), #fff, $red-bg calc(50% + 1px) )
-	+media(767)
-    	width: $w100
+	+media(1280)
+    	width: 100%
 	.col
 		&-inner
 			align-items: center
 			padding: 0 100px
 			height: 100%
+			+media(1280)
+				padding: 100px 40px
 	.title
 		color: $white-color
 		width: 100%
-		text-align: right	
+		text-align: right
+		+media(1280)
+			text-align: left	
 	.strong
 		font-size: 48px
 		font-weight: 400
 		text-transform: uppercase
 		display: inline-block
-		margin: 70px 0px 0 0		
+		margin: 70px 0px 0 0
+		+media(1280)
+			margin: 0		
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .studio-content
 	background-color: $grey__1
-	+media(767)
-    	width: $w100
+	+media(1280)
+    	width: 100%
 	.col
 		&-inner
 			padding: 90px 80px
 			flex-direction: row
+			+media(1280)
+				padding: 90px 80px 0 90px
+			+media(979)
+				flex-direction: column
+				padding: 80px 30px 40px 30px
+
 	.content-wrap
 		padding-right: 20px
 	
 	.info-text
 		padding-right: 20px
+		+media(979)
+			width: 100%
 
 .main-descr
 	color: $grey-color	
@@ -424,6 +580,8 @@
 		font-size: 16px
 		line-height: 18px			
 .awards
+	+media(979)
+		width: 100%
 	&-img
 		text-align: center	
 	&-info
@@ -451,8 +609,10 @@
 /*---------------------------------------*/
 .staff
 	background-color: $grey__1
-	+media(767)
-    	width: $w100
+	width: 30%
+	+media(979)
+    	width: 100%
+    	order: 2
 	.col
 		&-inner
 			padding: 60px 0 100px 0
@@ -460,6 +620,9 @@
 			align-items: center
 			padding-right: 35px
 			height: 100%
+			+media(979)
+				padding: 40px 30px
+				justify-content: left
 	&-descr
 		width: 65%
 		h3
@@ -472,11 +635,14 @@
 /*---------------------------------------*/
 .staff-content
 	background-color: $grey__1
-	+media(767)
-    	width: $w100
+	width: 70%
+	+media(979)
+    	width: 100%
 	.col
 		&-inner
 			padding: 60px 0 100px 0
+			+media(979)
+				padding: 80px 30px 40px 30px
 
 
 
@@ -502,6 +668,8 @@
 		display: flex
 		flex-direction: row
 		padding-top: 20px
+		.social-list
+			padding: 0	
 		.col-cv
 			flex: 1
 		.cv-link
@@ -522,27 +690,87 @@
 		.col-social-links
 			flex: 3
 			text-align: right
+		
 
 			
 
 /*---------------------------------------*/
 
 /*---------------------------------------*/
-.news-title
+.news
 	background: linear-gradient(to top left, $green-bg calc(50% - 1px), #fff, $green-bg calc(50% + 1px) )
-	+media(767)
-    	width: $w100
-	.col-content
-		height: $h500		
+	+media(1280)
+    	width: 100%
+	.col
+		&-inner
+			align-items: center
+			padding: 0 100px
+			height: 100%
+			+media(1280)
+				padding: 100px 40px
+	.title
+		color: $white-color
+		width: 100%
+		text-align: right
+		+media(1280)
+			text-align: left	
+	.strong
+		font-size: 48px
+		font-weight: 400
+		text-transform: uppercase
+		display: inline-block
+		margin: 70px 0px 0 0
+		+media(1280)
+			margin: 0		
 /*---------------------------------------*/
 
 /*---------------------------------------*/
+.news-content
+	background-color: $grey__1
+	+media(1280)
+    	width: 100%
+	.col
+		&-inner
+			padding: 80px 100px 60px 100px
 .news
-	background-color: $light-bg
-	+media(767)
-    	width: $w100
-	.col-content
-		height: $h500
+	&-item
+		display: flex
+		flex-direction: column
+		align-items: start
+		justify-content: space-between
+		
+	&-title
+		padding-bottom: 20px
+		text-align: left
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		// flex: 1 auto
+	&-name
+		font-weight: bold
+		line-height: 24px
+	&-date
+		font-size: 12px
+	&-img
+		flex: 1 auto
+		align-self: center	
+	&-descr
+		color: $light-dark-color
+		line-height: 14px
+		text-align: justify
+		padding: 20px 0 10px 0
+		flex: 1 auto
+	&-links
+		align-self: end
+	&-link
+		color: $red-color
+		font-size: 12px
+		line-height: 14px
+		text-transform: uppercase		
+
+
+			
+
 /*---------------------------------------*/
 
 /*---------------------------------------*/
@@ -550,8 +778,9 @@
 	background-color: $blue-bg
 	+media(767)
     	width: $w100
-	.col-content
-		height: $full-height
+	.col
+		&-inner
+			height: $full-height
 /*---------------------------------------*/
 
 /*---------------------------------------*/
@@ -559,6 +788,22 @@
 	background-color: $grey-bg-light
 	+media(767)
     	width: $w100
-	.col-content
-		height: $full-height
+	.col
+		&-inner
+			height: $full-height
+			padding: 150px 120px 50px 120px
+			+media(1280)
+				padding: 150px 40px 50px 40px
+	.address
+		&-info
+			margin-bottom: 0
+		&-contact
+			margin-left: 0	
+			margin-top: 20px
+
+.copyrights
+	position: absolute
+	bottom: 55px
+	left: 120px
+	color: #191919				
 /*---------------------------------------*/

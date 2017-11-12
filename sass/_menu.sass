@@ -4,14 +4,22 @@
   flex-wrap: no-wrap
   justify-content: right
   top: 45px
-  left: 0
-  width: 100%
-  padding: 0 11%
+  right: 11%
+  width: auto
+  height: 127px
+  padding: 0
   z-index: 10
   background-color: transparent
+  +media (1280)
+    top: 0
+    right: 0
   &-col_content
     display: flex
     overflow: hidden
+    width: 0
+    transition: width 0.3s ease-in
+    &.active
+      width: 100%
   &-col_hamburger
     display: flex 
   &-inner
@@ -20,10 +28,10 @@
     border-top: 4px solid #e9eae2
     border-bottom: 4px solid #e9eae2
     border-left: 4px solid #e9eae2
-    transition: transform 0.3s ease-in;
-    transform: translateX(100%)
+    transform: translateX(200%)
+    transition: transform 0.3s ease-in
     &.active
-      transform: translateX(0%)
+      transform: translateX(0)
   &-list
     text-align: right     
     li
@@ -65,4 +73,7 @@
     cursor: pointer
     position: relative
     z-index: 1
+
+.to-down
+  background-color: rgba(239, 188, 62, 0.75) 
 
