@@ -85,6 +85,8 @@ a
 
 .col
 	position: relative
+	display: flex
+	overflow: hidden
 	&-100
 		width: 100%
 	&-70
@@ -101,24 +103,13 @@ a
 		position: absolute
 		height: auto
 		width: auto
-		z-index: 2
-
-.bg
-	position: absolute
-	top: 0
-	left: 0
-	height: 100%
-	width: 100%
-	background-size: contain
-	background-repeat: no-repeat
-	z-index: -1		
+		z-index: 2	
 		
 .text
 	&-item
 		font-size: 12px
 		line-height: 12px
 		text-transform: uppercase
-		color: $grey-color
 		strong
 			font-weight: bold
 .likes
@@ -132,7 +123,9 @@ a
 
 .cell
 	&-text
+		padding: 25px 0 0 0
 	&-link
+		padding: 25px 0
 	&-likes
 		align-self: center
 
