@@ -2,6 +2,7 @@ $('.hamburger-btn').on('click', function() {
 	$('.nav-col_content, .nav-inner').toggleClass('active');
 });
 
+
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
@@ -23,29 +24,13 @@ var swiper = new Swiper('.staff-slider', {
 			slidesPerView: 3,
 			spaceBetween: 40,
 		},
-		768: {
+		840: {
 			slidesPerView: 2,
 			spaceBetween: 30,
 		},
 		640: {
 			slidesPerView: 1,
 			spaceBetween: 20,
-		}
-	}
-});
-
-var swiper = new Swiper('.news-slider', {
-	slidesPerView: 2,
-	spaceBetween: 20,
-	freeMode: false,
-	breakpoints: {
-		1024: {
-			slidesPerView: 2,
-			spaceBetween: 40,
-		},
-		768: {
-			slidesPerView: 1,
-			spaceBetween: 30,
 		}
 	}
 });

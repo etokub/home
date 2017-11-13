@@ -6,7 +6,11 @@
 .right-side
 	flex-direction: column
 	+media(1280)
-    	width: 100% 
+    	width: 100%
+    	flex-direction: row
+    	flex-wrap: wrap
+    	+media(767)
+    		flex-direction: column	 
 
 /*---------------------------------------*/
 .hero
@@ -77,7 +81,6 @@
 .p-col
 	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
 	width: 40%
-	height: 500px
 	display: flex
 	justify-content: center
 	align-items: center
@@ -161,11 +164,6 @@
 		&:hover::after
 			transform: scale(1)			
 /*---------------------------------------*/
-		
-
-/*---------------------------------------*/
-								
-/*---------------------------------------*/
 
 /*---------------------------------------*/
 .item-2
@@ -174,7 +172,6 @@
 	display: flex
 	position: relative
 	padding-top: 100px
-	height: 470px
 	+media(1280)
 		height: auto
 	+media(980)
@@ -256,7 +253,6 @@
 	flex-direction: column-reverse
 	width: 65%
 	padding: 0px 120px
-	height: 300px
 	+media(1280)
 		height: auto
 		padding: 50px 120px
@@ -335,13 +331,12 @@
 .item-6
 	background-color: $grey__2
 	display: flex
-	flex: 1
+	flex: 2
 	width: 100%
 	flex-direction: row
-	height: 250px
 	+media(1280)
-		height: auto
-		width: 40%
+		width: 60%
+		flex: 2
 		flex-direction: column
 		align-items: center
 		+media(767)
@@ -375,17 +370,17 @@
 	background-color: $grey__1
 	width: 100%
 	display: flex
+	flex: 4 auto
 	flex-direction: column
 	align-items: center	
-	height: 470px
 	+media(1280)
-		height: auto
 		width: 60%
+		flex: 3
 		padding: 50px 0
 	+media(767)
 		width: 100%
 	+media(540)
-		flex-direction: column-reverse	
+		flex-direction: column-reverse
 	.cell
 		&-content
 			display: flex
@@ -395,8 +390,10 @@
 			padding: 0px 25px 25px 50px
 			+media(540)
 				flex-direction: column
+				align-items: center
+				width: auto
 		&-img
-			display: flex
+			
 			flex: 1	
 		
 		&-text
@@ -417,8 +414,8 @@
 	background-color: $white-bg
 	width: 100%
 	display: flex
+	flex: 2 auto
 	flex-direction: row-reverse
-	height: 250px
 	+media(1280)
 		height: auto
 		width: 70%
@@ -433,7 +430,7 @@
 			flex: 1 0 auto
 			flex-direction: column
 			align-items: center
-			padding: 0 25px 0
+			padding: 25px 25px 25px 0
 			+media(1280)
 				flex-direction: row
 				justify-content: space-around
@@ -455,9 +452,10 @@
 	background: linear-gradient(to top left, $yellow-bg calc(50% - 1px), #fff, $yellow-bg calc(50% + 1px) )
 	width: 100%
 	display: flex
+	flex: 3 auto
 	height: auto
-	height: 300px
-	padding: 50px 50px 50px 70px
+	// height: 300px
+	padding: 90px 50px 90px 50px
 	+media(1280)
 		height: auto
 		width: 30%
@@ -502,15 +500,16 @@
 /*---------------------------------------*/		
 .studio
 	background: linear-gradient(to top left, $red-bg calc(50% - 1px), #fff, $red-bg calc(50% + 1px) )
+	width: 30%
+	display: flex
+	justify-content: end;
+	align-items: end
+	padding: 0 100px 150px 0
 	+media(1280)
     	width: 100%
-	.col
-		&-inner
-			align-items: center
-			padding: 0 100px
-			height: 100%
-			+media(1280)
-				padding: 100px 40px
+    	padding: 100px 25px
+    	justify-content: left 
+	
 	.title
 		color: $white-color
 		width: 100%
@@ -530,14 +529,17 @@
 /*---------------------------------------*/
 .studio-content
 	background-color: $grey__1
+	display: flex
+	width: 70%
 	+media(1280)
     	width: 100%
-	.col
-		&-inner
+	.cell
+		&-content
 			padding: 90px 80px
+			display: flex
 			flex-direction: row
 			+media(1280)
-				padding: 90px 80px 0 90px
+				padding: 50px 25px
 			+media(979)
 				flex-direction: column
 				padding: 80px 30px 40px 30px
@@ -545,10 +547,11 @@
 	.content-wrap
 		padding-right: 20px
 	
-	.info-text
-		padding-right: 20px
-		+media(979)
-			width: 100%
+.info-text
+	flex: 1
+	padding-right: 20px
+	+media(979)
+		width: 100%
 
 .main-descr
 	color: $grey-color	
@@ -565,7 +568,9 @@
 		padding-bottom: 25px
 		font-size: 16px
 		line-height: 18px			
+
 .awards
+	flex: 1
 	+media(979)
 		width: 100%
 	&-img
@@ -596,21 +601,24 @@
 .staff
 	background-color: $grey__1
 	width: 30%
-	+media(979)
+	+media(1280)
     	width: 100%
     	order: 2
-	.col
-		&-inner
+	.cell
+		&-content
 			padding: 60px 0 100px 0
+			display: flex
 			justify-content: right
-			align-items: center
+			align-items: start
 			padding-right: 35px
 			height: 100%
-			+media(979)
-				padding: 40px 30px
+			+media(1280)
+				padding: 50px 25px
 				justify-content: left
 	&-descr
 		width: 65%
+		+media(767)
+			width: 100%
 		h3
 			font-size: 14px
 		h3, p
@@ -622,15 +630,13 @@
 .staff-content
 	background-color: $grey__1
 	width: 70%
-	+media(979)
+	+media(1280)
     	width: 100%
-	.col
-		&-inner
-			padding: 60px 0 100px 0
-			+media(979)
-				padding: 80px 30px 40px 30px
-
-
+	.cell
+		&-content
+			padding: 60px 100px 60px 0
+			+media(1280)
+				padding: 50px 0px
 
 .personal
 	&-info
@@ -640,7 +646,11 @@
 			&-link
 				color: $red-color
 				font-size: 14px
-				padding-left: 12px	
+				padding-left: 12px
+
+	&-item
+		padding: 0 25px
+
 	&-title
 		h3
 			font-weight: 700
@@ -650,6 +660,7 @@
 			font-weight: 400
 			line-height: 16px
 			text-transform: uppercase
+	
 	&-links
 		display: flex
 		flex-direction: row
@@ -676,24 +687,21 @@
 		.col-social-links
 			flex: 3
 			text-align: right
-		
-
-			
-
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .news
 	background: linear-gradient(to top left, $green-bg calc(50% - 1px), #fff, $green-bg calc(50% + 1px) )
+	width: 30%
+	display: flex
+	justify-content: end;
+	align-items: end
+	padding: 0 100px 150px 0
 	+media(1280)
     	width: 100%
-	.col
-		&-inner
-			align-items: center
-			padding: 0 100px
-			height: 100%
-			+media(1280)
-				padding: 100px 40px
+    	padding: 100px 25px
+    	justify-content: left 
+	
 	.title
 		color: $white-color
 		width: 100%
@@ -707,23 +715,35 @@
 		display: inline-block
 		margin: 70px 0px 0 0
 		+media(1280)
-			margin: 0		
+			margin: 0	
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .news-content
 	background-color: $grey__1
+	width: 70%
 	+media(1280)
     	width: 100%
-	.col
-		&-inner
+	.cell
+		&-content
+			display: flex
 			padding: 80px 100px 60px 100px
+			+media(1280)
+				padding: 50px 25px
+			+media(767)
+				flex-direction: column	
 .news
 	&-item
 		display: flex
 		flex-direction: column
 		align-items: start
 		justify-content: space-between
+		&:nth-child(2n+1)
+			padding-right: 15px
+		&:nth-child(2n)
+			padding-left: 15px	
+		+media(767)
+			padding-top: 50px	
 		
 	&-title
 		padding-bottom: 20px
@@ -753,33 +773,49 @@
 		font-size: 12px
 		line-height: 14px
 		text-transform: uppercase		
-
-
-			
-
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .map
 	background-color: $blue-bg
+	width: 50%
 	+media(767)
-    	width: $w100
-	.col
-		&-inner
-			height: $full-height
+    	width: 100%
+    	height: 50vh
+    	min-height: 400px
+	.cell
+		&-content
+			min-height: $full-height
+			position: relative
 /*---------------------------------------*/
 
 /*---------------------------------------*/
 .contact-g
 	background-color: $grey-bg-light
+	width: 50%
+	position: relative
+	display: flex
 	+media(767)
-    	width: $w100
-	.col
-		&-inner
-			height: $full-height
+    	width: 100%
+	.cell
+		&-content
+			display: flex
 			padding: 150px 120px 50px 120px
+			width: 100%
 			+media(1280)
 				padding: 150px 40px 50px 40px
+			+media(767)
+				padding: 100px 25px	
+	
+	&__address
+		flex: 4
+	&__text
+		flex-direction: column
+		align-items: end
+		flex: 1 0 auto
+		+media(767)
+			align-items: stretch
+
 	.address
 		&-info
 			margin-bottom: 0
@@ -787,9 +823,24 @@
 			margin-left: 0	
 			margin-top: 20px
 
+	.img-holder
+		+media(767)
+			text-align: right
+	.hero__title
+		+media(767)
+			align-self: auto
+			text-align: right
+	.socila-list
+		+media(767)
+			text-align: right					
+
 .copyrights
 	position: absolute
 	bottom: 55px
 	left: 120px
-	color: #191919				
+	color: #191919
+	+media(1280)
+		left: 25px
+		right: 25px
+		text-align: center				
 /*---------------------------------------*/
