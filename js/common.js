@@ -13,6 +13,13 @@ $(window).scroll(function() {
     }
 });
 
+$('.nav-link').click(function(event){
+    $('html, body').animate({
+      scrollTop: $( $.attr(this, 'href') ).offset().top -50
+    }, 500);
+    event.preventDefault();
+  });
+
 
 
 var swiper = new Swiper('.staff-slider', {

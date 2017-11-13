@@ -4,9 +4,8 @@
   flex-wrap: no-wrap
   justify-content: right
   top: 45px
-  right: 11%
+  right: 10%
   width: auto
-  height: 127px
   padding: 0
   z-index: 10
   background-color: transparent
@@ -24,19 +23,23 @@
     display: flex 
   &-inner
     background-color: $yellow-bg-nav
-    line-height: 118px
-    border-top: 4px solid #e9eae2
-    border-bottom: 4px solid #e9eae2
-    border-left: 4px solid #e9eae2
+    display: flex
+    align-items: center
     transform: translateX(200%)
     transition: transform 0.3s ease-in
     &.active
       transform: translateX(0)
   &-list
-    text-align: right     
+    display: flex
+    align-items: center
+    +media(767)
+      flex-direction: column
+      margin: 50px 0     
     li
       display: inline-block
       padding: 0 30px 
+      +media(767)
+        padding: 30px 30px
   &-link
     font-size: 14px
     color: $white-color
@@ -45,18 +48,22 @@
 
 
 .hamburger
-  height: 127px
-  width: 130px
   display: flex
   align-items: center
   justify-content: center
   border: 4px solid #e9eae2
   position: relative
+  padding: 47px 40px
   z-index: 10
   background: transparent
   overflow: hidden
   background: transparent
   transition: background-color .3s ease-in-out
+  +media(980)
+    padding: 30px 20px
+    +media(767)
+      height: 40px
+      border: none
   &:hover
     background-color: $yellow-bg-nav
   &__line    
@@ -73,6 +80,9 @@
     cursor: pointer
     position: relative
     z-index: 1
+    +media(767)
+      width: 30px
+      height: 15px
 
 .to-down
   background-color: rgba(239, 188, 62, 0.75)
